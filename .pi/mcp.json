@@ -17,6 +17,8 @@
       "args": [
         "-y",
         "@playwright/mcp@0.0.83",
+        "--executable-path",
+        "/home/danial/.local/opt/chrome-stable/opt/google/chrome/chrome",
         "--headless",
         "--isolated",
         "--block-service-workers",

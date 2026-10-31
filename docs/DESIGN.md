@@ -6,12 +6,15 @@ Keep this document specific, short, and durable. It is the visual and interactio
 
 Capture this from the user's ordinary brief or `/design`; do not require every field or a separate approval step. Keep explicit choices separate from agent-proposed details. Preserve it across bootstrap/resume; revise only what the current request supersedes.
 
-- Owner-stated style / design system:
-- Exact brand colors and intended roles:
-- Theme(s), typography, density, shape, motion, RTL/locales:
-- Must keep / avoid:
-- Agent-proposed details / unresolved choices:
-- Canonical code token source (path; unknown until inspected or implemented):
+- Owner-stated style / design system: ultra-beautiful, modern Iranian mobile shop; speed + beauty are top priorities; no Elementor (native lightweight theme); dark/light dual theme required.
+- Exact brand colors and intended roles (owner-supplied 2026-10-11, CSS variables):
+  light — text #080c13 / background #f2f5fb / primary #3064d6 / secondary #7a9ff2 / accent #3a75fb
+  dark — text #edf1f7 / background #04060c / primary #295ed1 / secondary #0d3487 / accent #043dc3
+  Selector contract: `:root[data-theme="light"|"dark"]`. Contrast pairs unmeasured yet — must prove before ship.
+- Theme(s), typography, density, shape, motion, RTL/locales: fa_IR, RTL-first; typography TBD (Vazirmatn subset proposed, not yet owner-approved).
+- Must keep / avoid: must keep WooCommerce + official Torob plugin + Zibal gateway + RankMath SEO compatibility; avoid page builders, jQuery-heavy components, multi-cache stacks.
+- Agent-proposed details / unresolved choices: Vazirmatn stack w/ Tahoma fallback (no webfont file yet — system rendering; bundle woff2 as follow-up); token file theme/mobilekh/assets/css/tokens.css (created, light+dark); signature = gradient hero ring + signature product cards + pill category nav; homepage query caching via transients = open follow-up.
+- Canonical code token source (path; unknown until inspected or implemented): theme/mobilekh/assets/css/tokens.css — implemented; semantic roles text/muted/background/surface/primary/secondary/accent/border/success/danger/warning + radius/spacing scale.
 
 Before implementation, semantic values below specify the intended palette; distinguish owner-stated values from proposed details. After implementation, the code token source owns resolved values; this document owns intent and token mappings. Update both for an accepted design change. Never maintain a second competing palette. Color/style choices here affect the product, not Pi's terminal theme.
 
